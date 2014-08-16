@@ -1,0 +1,5 @@
+.DS_Store
+.cordova/
+node_modules
+plugins/
+platforms/
