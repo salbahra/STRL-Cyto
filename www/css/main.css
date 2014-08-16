@@ -1,0 +1,66 @@
+body {
+    margin:0
+}
+a {
+    text-decoration:none
+}
+:not(input) {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -ms-touch-select:none;
+    -ms-content-zooming:none;
+    -o-user-select:none;
+    user-select:none
+}
+.ui-popup-screen {
+    height: 100%
+}
+.tight {
+    margin:0
+}
+.smaller {
+    margin:0;
+    font-size:smaller
+}
+.nobr {
+    white-space:nowrap
+}
+.wrap {
+    white-space:inherit!important
+}
+.mini-load {
+    zoom:.5;
+    height:2.875em;
+    width:2.875em;
+    margin:0 auto!important;
+    opacity:.18
+}
+.help-text {
+    word-wrap:normal;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-align:center
+}
+.center {
+    text-align:center!important
+}
+#sure {
+    padding:0.5em;
+    width:300px
+}
+@media (max-width:480px) {
+    #sure {
+        width:250px
+    }
+}
+#start ul, #about ul {
+    width:250px;
+    margin:0 auto;
+    left:0;
+    right:0;
+    position:absolute;
+    top:15%
+}
+

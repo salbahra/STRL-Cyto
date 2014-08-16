@@ -1,0 +1,30 @@
+{
+  "name": "STRL Cyto",
+  "version": "1.0.0",
+  "description": "Quick reference for UTHSCSA / STRL Cytogenetics Laboratory",
+  "main": "www/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/salbahra/STRL-Cyto.git"
+  },
+  "keywords": [
+    "cytogenetics",
+    "uthscsa",
+    "strl",
+    "fish"
+  ],
+  "author": "Samer Albahra",
+  "bugs": {
+    "url": "https://github.com/salbahra/STRL-Cyto/issues"
+  },
+  "homepage": "https://github.com/salbahra/STRL-Cyto",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-shell": "^0.7.0",
+    "grunt-text-replace": "^0.3.12"
+  }
+}
