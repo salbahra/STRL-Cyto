@@ -1,13 +1,13 @@
-## Scan In
+## UTHSCSA / STRL Cytogenetics
 
-<img align="left" height="96" src="http://albahra.com/scanin/icon.png">[Official Site][official] | [Support][help] | [Changelog][changelog]  
-&copy; 2013-2014 [Samer Albahra][salbahra] ([@salbahra](https://twitter.com/salbahra))  
+[Official Site][official] | [Support][help] | [Changelog][changelog]
+&copy; 2013-2014 [Samer Albahra][salbahra] ([@salbahra](https://twitter.com/salbahra))
 
-Designed to allow quick and easy sign in to Google spreadsheet based QR codes.
+Quick reference for UTHSCSA / STRL Cytogenetics Laboratory.
 
 ---
 
-[official]: http://albahra.com/scanin/
+[official]: http://pathology.uthscsa.edu/strl/cytogenics/index.shtml
 [help]: mailto:samer@albahra.com
 [changelog]: https://github.com/salbahra/SignIn/releases
 [salbahra]: http://albahra.com/
