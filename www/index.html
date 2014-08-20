@@ -1,23 +1,700 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    	<title>UTHSCSA/STRL Cytogenetics</title>
-    	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
-    	<meta content="yes" name="apple-mobile-web-app-capable">
-        <meta name="apple-mobile-web-app-title" content="STRL Cyto">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.min.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <script src="js/jquery.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="cordova.js"></script>
-        <script src="js/jquery.mobile.min.js"></script>
-    </head>
-    <body>
-        <div data-role="page" id="start">
-            <ul data-role="listview">
+
+<head>
+    <title>UTHSCSA/STRL Cytogenetics</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-title" content="STRL Cyto">
+    <meta name="apple-mobile-web-app-status-bar-style" content="inherit">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+    <script src="js/libs.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="start">
+        <div class="hdr1">
+            UT Health Science Center
+        </div>
+        <div class="hdr2">
+            at San Antonio
+        </div>
+        <div class="hdr3">
+            Department of Pathology
+        </div>
+        <div data-role="content" role="main" class="menu">
+            <ul data-role="listview" data-inset="true" style="background-color:white">
+                <li data="listheader">
+                    <div class="menuheader">
+                        Cytogenetics Laboratory
+                    </div>
+                </li>
+                <li>
+                    <a href="#fishForm">
+                        <div class="menu">
+                            FISH Request Form
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#fishMenu">
+                        <div class="menu">
+                            FISH Test Menu
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#publications">
+                        <div class="menu">
+                            Recent Publications
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#awards">
+                        <div class="menu">
+                            Our Award
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#team">
+                        <div class="menu">
+                            Meet the Team
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <div class="menu">
+                            Contact Us
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
-    </body>
+    </div>
+
+    <div data-role="page" id="fishForm">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+            <h1 class="h1">Request Form</h1>
+        </div>
+        <div data-role="content" role="main">
+            ____________________
+        </div>
+    </div>
+
+    <div data-role="page" id="fishMenu">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+            <h1 class="h1">FISH Tests</h1>
+        </div>
+        <div class="fishHeader1">
+            Hematological Malignancies
+        </div>
+        <div class="menuNote">
+            *Probes listed under panels can be ordered as single FISH tests
+        </div>
+        <div data-role="content" role="main" class="panels">
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>AML / MDS Panel*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        5q deletion / monosomy 5
+                    </div>
+                    <div class="ui-block-b">
+                        TAS2R1 / EGR1
+                    </div>
+                    <div class="ui-block-a">
+                        7q deletion / monosomy 7
+                    </div>
+                    <div class="ui-block-b">
+                        RELN / TES
+                    </div>
+                    <div class="ui-block-a">
+                        t(8;21)
+                    </div>
+                    <div class="ui-block-b">
+                        ETO / AML1
+                    </div>
+                    <div class="ui-block-a">
+                        11q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        MLL
+                    </div>
+                    <div class="ui-block-a">
+                        t(15;17)
+                    </div>
+                    <div class="ui-block-b">
+                        PML / RARA
+                    </div>
+                    <div class="ui-block-a">
+                        inv(16)
+                    </div>
+                    <div class="ui-block-b">
+                        MYH11 / CBFB
+                    </div>
+                    <div class="ui-block-a">
+                        17p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p53
+                    </div>
+                    <div class="ui-block-a">
+                        20q deletion / monosomy 20
+                    </div>
+                    <div class="ui-block-b">
+                        MYBL2 / PTPRT
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>ALL Panel (B-cell)*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        8q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        cMYC
+                    </div>
+                    <div class="ui-block-a">
+                        9p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p16 / D9Z3
+                    </div>
+                    <div class="ui-block-a">
+                        hyperdiploidy – chr. 4
+                    </div>
+                    <div class="ui-block-b">
+                        FIP1L1 / CHIC2 / PDGFRA
+                    </div>
+                    <div class="ui-block-a">
+                        hyperdiploidy – chrs. 10 & 17
+                    </div>
+                    <div class="ui-block-b">
+                        D10Z1 / D17Z1
+                    </div>
+                    <div class="ui-block-a">
+                        t(12;21)
+                    </div>
+                    <div class="ui-block-b">
+                        ETV6 / AML1
+                    </div>
+                    <div class="ui-block-a">
+                        11q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        MLL
+                    </div>
+                    <div class="ui-block-a">
+                        t(9;22)
+                    </div>
+                    <div class="ui-block-b">
+                        ABL1 / BCR
+                    </div>
+                    <div class="ui-block-a">
+                        14q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        IGH
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>CLL Panel*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        6q deletion
+                    </div>
+                    <div class="ui-block-b">
+                        D6Z1 / MYB
+                    </div>
+                    <div class="ui-block-a">
+                        trisomy 12
+                    </div>
+                    <div class="ui-block-b">
+                        D12Z1
+                    </div>
+                    <div class="ui-block-a">
+                        11q deletion
+                    </div>
+                    <div class="ui-block-b">
+                        D11Z1 / ATM
+                    </div>
+                    <div class="ui-block-a">
+                        t(14;18)
+                    </div>
+                    <div class="ui-block-b">
+                        IGH / BCL2
+                    </div>
+                    <div class="ui-block-a">
+                        14q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        IGH
+                    </div>
+                    <div class="ui-block-a">
+                        17p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p53
+                    </div>
+                    <div class="ui-block-a">
+                        t(11;14)
+                    </div>
+                    <div class="ui-block-b">
+                        CCND1 / IGH
+                    </div>
+                    <div class="ui-block-a">
+                        13q deletion
+                    </div>
+                    <div class="ui-block-b">
+                        RB1 / CTB-163C9
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>MM Panel (on isolated plasma cells)*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        11q deletion
+                    </div>
+                    <div class="ui-block-b">
+                        D11Z1 / ATM
+                    </div>
+                    <div class="ui-block-a">
+                        17p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p53
+                    </div>
+                    <div class="ui-block-a">
+                        13q deletion
+                    </div>
+                    <div class="ui-block-b">
+                        RB1 / CTB-163C9
+                    </div>
+                    <div class="ui-block-a">
+                        t(11;14)
+                    </div>
+                    <div class="ui-block-b">
+                        CCND1 / IGH
+                    </div>
+                    <div class="ui-block-a">
+                        t(4;14)
+                    </div>
+                    <div class="ui-block-b">
+                        FGFR3 / IGH
+                    </div>
+                    <div class="ui-block-a">
+                        t(14;16)
+                    </div>
+                    <div class="ui-block-b">
+                        IGH / MAF
+                    </div>
+                    <div class="ui-block-a">
+                        hyperdiploidy
+                    </div>
+                    <div class="ui-block-b">
+                        ATM / MAF / FGFR3
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>Myeloproliferative Disease Panel*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        t(9;22)
+                    </div>
+                    <div class="ui-block-b">
+                        ABL1 / BCR
+                    </div>
+                    <div class="ui-block-a">
+                        4q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        FIP1L1 / CHIC2 / PDGFRA
+                    </div>
+                    <div class="ui-block-a">
+                        T(5;12)
+                    </div>
+                    <div class="ui-block-b">
+                        PDGFRB
+                    </div>
+                    <div class="ui-block-a">
+                        8p11 rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        FGFR1
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>T-Cell Lymphoma Panel*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        inv(7) / iso(7q)
+                    </div>
+                    <div class="ui-block-b">
+                        TCRB
+                    </div>
+                    <div class="ui-block-a">
+                        inv(14) / 14q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        TCRAD
+                    </div>
+                    <div class="ui-block-a">
+                        t(2;5) / 2p rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        ALK
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>B-Cell Lymphoma Panel*</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        t(14;18)
+                    </div>
+                    <div class="ui-block-b">
+                        IGH / BCL2
+                    </div>
+                    <div class="ui-block-a">
+                        8q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        cMYC
+                    </div>
+                    <div class="ui-block-a">
+                        3q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        BCL6
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>Other FISH Tests</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        t(9;22)
+                    </div>
+                    <div class="ui-block-b">
+                        ABL1 / BCR
+                    </div>
+                    <div class="ui-block-a">
+                        t(11;22)
+                    </div>
+                    <div class="ui-block-b">
+                        EWSR1
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="fishHeader2">
+                Constitutional Abnormalities
+            </div>
+        <div data-role="content" role="main" class="panels">
+                <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                    <h3>Aneuvysion (Amniotic Fluid)</h3>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            13 / 21
+                        </div>
+                        <div class="ui-block-b">
+                            RB1 / D21S259, D21S341, D21S342
+                        </div>
+                        <div class="ui-block-a">
+                            18 / X / Y
+                        </div>
+                        <div class="ui-block-b">
+                            D18Z1 / DXZ1 / DYZ3
+                        </div>
+                    </div>
+                </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>Products of Conception</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        5q deletion / monosomy 5
+                    </div>
+                    <div class="ui-block-b">
+                        TAS2R1 / EGR1
+                    </div>
+                    <div class="ui-block-a">
+                        7q deletion / monosomy 7
+                    </div>
+                    <div class="ui-block-b">
+                        RELN / TES
+                    </div>
+                    <div class="ui-block-a">
+                        t(8;21)
+                    </div>
+                    <div class="ui-block-b">
+                        ETO / AML1
+                    </div>
+                    <div class="ui-block-a">
+                        11q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        MLL
+                    </div>
+                    <div class="ui-block-a">
+                        t(15;17)
+                    </div>
+                    <div class="ui-block-b">
+                        PML / RARA
+                    </div>
+                    <div class="ui-block-a">
+                        inv(16)
+                    </div>
+                    <div class="ui-block-b">
+                        MYH11 / CBFB
+                    </div>
+                    <div class="ui-block-a">
+                        17p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p53
+                    </div>
+                    <div class="ui-block-a">
+                        20q deletion / monosomy 20
+                    </div>
+                    <div class="ui-block-b">
+                        MYBL2 / PTPRT
+                    </div>
+                </div>
+            </div>
+            <div data-role="collapsible" data-inset="false" data-iconpos="right" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+                <h3>Microdeletion Probes</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        5q deletion / monosomy 5
+                    </div>
+                    <div class="ui-block-b">
+                        TAS2R1 / EGR1
+                    </div>
+                    <div class="ui-block-a">
+                        7q deletion / monosomy 7
+                    </div>
+                    <div class="ui-block-b">
+                        RELN / TES
+                    </div>
+                    <div class="ui-block-a">
+                        t(8;21)
+                    </div>
+                    <div class="ui-block-b">
+                        ETO / AML1
+                    </div>
+                    <div class="ui-block-a">
+                        11q rearrangement
+                    </div>
+                    <div class="ui-block-b">
+                        MLL
+                    </div>
+                    <div class="ui-block-a">
+                        t(15;17)
+                    </div>
+                    <div class="ui-block-b">
+                        PML / RARA
+                    </div>
+                    <div class="ui-block-a">
+                        inv(16)
+                    </div>
+                    <div class="ui-block-b">
+                        MYH11 / CBFB
+                    </div>
+                    <div class="ui-block-a">
+                        17p deletion
+                    </div>
+                    <div class="ui-block-b">
+                        p53
+                    </div>
+                    <div class="ui-block-a">
+                        20q deletion / monosomy 20
+                    </div>
+                    <div class="ui-block-b">
+                        MYBL2 / PTPRT
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div data-role="page" id="publications">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+            <h1 class="h1">Publications</h1>
+        </div>
+            <ul data-role="listview">
+                <li>
+                    <a href="http://www.sciencedirect.com/science/article/pii/S0014480014000884">
+                        <div class="publications">
+                            Complex/variant translocations in chronic myelogenous leukemia (CML): genesis and prognosis with 4 new cases.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://onlinelibrary.wiley.com/doi/10.1111/ejh.12333/pdf">
+                        <div class="publications">
+                            Acute multilineage (B/myeloid) leukemia with RUNX1 duplication/amplification and hypereosinophilia
+                        </div>
+                    </a>   
+                </li>
+                <li>
+                    <a href="http://onlinelibrary.wiley.com/doi/10.1111/ejh.12326/pdf">
+                        <div class="publications">
+                            PML‐RARA fusion resulting from a cryptic insertion of RARA gene into PML gene without the reciprocal RARA‐PML fusion: clinical, cytogenetic, and molecular characterization and prognosis.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.nature.com/leu/journal/vaop/ncurrent/full/leu2014112a.html">
+                        <div class="publications">
+                            PKA/AMPK signaling in relation to adiponectin's antiproliferative effect on multiple myeloma cells.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3697225/">
+                        <div class="publications">
+                            Fetoplacental discrepancy with normal karyotype in amniotic fluid and two different cell lines in placenta.
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.sciencedirect.com/science/article/pii/S0014480012001505">
+                        <div class="publications">
+                            Cytogenetic abnormalities precede morphological abnormalities in developing malignant conditions: report of 2 cases.
+                        </div>
+                    </a>
+                </li>
+            </ul>
+    </div>
+
+    <div data-role="page" id="awards">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+        <h1 class="h1">Awards</h1>
+        </div>
+    </div>
+    
+   <div data-role="page" id="team">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+        <h1 class="h1">The Team</h1>
+        </div>
+    </div>
+    
+    <div data-role="page" id="contact">
+        <div data-role="header" data-add-back-btn="true" style="background-color:inherit">
+            <h1 class="h1">Contact</h1>
+        </div>
+            <div>
+                <div class="contactheader">
+                        Clinical and Molecular <br> Cytogenetics Laboratory
+                </div>
+            </div>
+                <div data-role="content" role="main" class="panels2">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            phone
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="tel:2105674050">
+                                (210) 567-4050
+                            </a>
+                        </div>
+                        <div class="ui-block-a">
+                            fax
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="tel:2105674041">
+                                (210) 567-4041
+                            </a>
+                        </div>
+                        <div class="ui-block-a">
+                            address
+                        </div>
+                        <div class="ui-block-b">
+                            Department of Pathology <br> Room 318C <br> 7703 Floyd Curl Drive <br> San Antonio, Texas
+                        </div>
+                        <div class="ui-block-a">
+                            hours
+                        </div>
+                        <div class="ui-block-b">
+                            Mon-Fri: 8:00am to 5:00pm
+                        </div>
+                    </div>
+                </div>    
+                <div class="contact">
+                    Gopalrao Velagaleti, Ph.D., FACMG
+                </div>
+                <div class="contact2">
+                    Director, Cytogenetics Laboratory Professor, Pathology, Pediatrics and Clinical Laboratory Sciences
+                </div>
+                <div data-role="content" role="main" class="panels2">  
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            phone
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="tel:2105674021">
+                                (210) 567-4021
+                            </a>
+                        </div>
+                        <div class="ui-block-a">
+                            e-mail
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="mailto:velagaleti@uthscsa.edu">
+                                velagaleti@uthscsa.edu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    Veronica Ortega, BA, CG (ASCP) CM
+                </div>
+                <div class="contact2">
+                    Manager, Cytogenetics Laboratory
+                </div>
+                <div data-role="content" role="main" class="panels2">  
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            phone - lab
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="tel:2105674050">
+                                (210) 567-4050
+                            </a>
+                        </div>
+                        <div class="ui-block-a">
+                            phone - office
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="tel:2105674126">
+                                (210) 567-4126
+                            </a>
+                        </div>
+                        <div class="ui-block-a">
+                            e-mail
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="mailto:ortegav@uthscsa.edu">
+                                ortegav@uthscsa.edu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+          
+    </div>
+</body>
+
 </html>
