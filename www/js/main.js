@@ -10,7 +10,7 @@ if (isAndroid) {
             navigator.app.clearCache();
         } catch (err) {}
     });
-} else if (isIEMobile || isWinApp) {
+} else if (isIEMobile) {
     $.ajaxSetup({
         "cache": false
     });
@@ -19,7 +19,7 @@ if (isAndroid) {
 $(document)
 .ready(function() {
     //Attach FastClick handler
-    FastClick.attach(document.body);
+//    FastClick.attach(document.body);
 
     //Use system browser for links on iOS and Windows Phone
     if (isiOS || isIEMobile) {
@@ -59,7 +59,7 @@ $(document)
 })
 .one("mobileinit", function(){
     //After jQuery mobile is loaded set intial configuration
-    $.mobile.activeBtnClass = "disabled";
+    $.mobile.activeBtnClass = "activeButton";
 })
 .on("resume",function(){
 // Handle OS resume event triggered by PhoneGap
@@ -92,4 +92,3 @@ function fixInputClick(page) {
         });
     }
 }
-
