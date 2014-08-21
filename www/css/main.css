@@ -61,7 +61,7 @@ a {
     left:0;
     right:0;
     position:absolute;
-    top:15%
+    top:120px
 }
 
 .custom-corners .ui-bar {
@@ -95,13 +95,24 @@ a {
 }
 
 .ui-toolbar-back-btn {
-    top: 1px;
+    top: 2px;
 }
 
 body, input, select, textarea, button, .ui-btn {
     font-size: 1em;
     line-height: 1.3;
-    font: normal 14px/20px HelveticaNeue-bold;
+    font: normal 16px/20px HelveticaNeue-bold;
+}
+
+.ui-header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index:200;
+}
+
+.content {
+    margin-top: 43px;
 }
 
 .h1 {
@@ -111,25 +122,25 @@ body, input, select, textarea, button, .ui-btn {
 .hdr1 {
     margin-top: 15px;
     text-align: center;
-    font: bold 20px/40px copperplate;
+    font: bold 22px/40px copperplate;
     color:rgb(211,89,6);
 }
 
 .hdr2 {
-    margin-top: -15px;
+    margin-top: -10px;
     text-align: center;
-    font: 14px/10px copperplate;
+    font: 16px/10px copperplate;
     color:rgb(211,89,6);
 }
 
 .hdr3 {
     text-align: center;
-    font: normal 12px/42px zapfino;
+    font: normal 14px/48px zapfino;
     color:rgb(211,89,6);
 }
 
 .menu {
-    font: bold 14px/18px HelveticaNeue;
+    font: bold 16px/18px HelveticaNeue;
     color:rgb(90,90,90);
 }
 
@@ -139,16 +150,10 @@ body, input, select, textarea, button, .ui-btn {
     color:rgb(211,89,6);
 }
 
-
-#start ul, #about ul {
-    width: 250px;
-    top: 20%;
-}
-
 .fishHeader1 {
     text-align: center;
     color: rgb(90,90,90);
-    font: bold 14px/30px HelveticaNeue;
+    font: bold 16px/30px HelveticaNeue;
     background-color: white;
 }
 
@@ -162,7 +167,7 @@ body, input, select, textarea, button, .ui-btn {
 .fishHeader2 {
     text-align: center;
     color: rgb(90,90,90);
-    font: bold 14px/50px HelveticaNeue;
+    font: bold 16px/50px HelveticaNeue;
     background-color: white;
 }
 
@@ -176,18 +181,18 @@ body, input, select, textarea, button, .ui-btn {
 }
 
 .panels .ui-block-a {
-    font: normal 12px/10px HelveticaNeue-bold;
+    font: normal 14px/18px HelveticaNeue-bold;
     color: rgb(90,90,90);
 }
 
 .panels .ui-block-b {
-    font: italic 12px/10px HelveticaNeue-thin;
+    font: italic 14px/18px HelveticaNeue;
     color: grey;
     font-weight: 200;
 }
 
 .publications {
-    font: 12px/20px HelveticaNeue-light;
+    font: 14px/20px HelveticaNeue-light;
     color: rgb(90,90,90);
     word-wrap: normal !important;
     white-space: normal !important;
@@ -203,7 +208,7 @@ body, input, select, textarea, button, .ui-btn {
 }
 
 .contactheader {
-    margin-top: 10px;
+    margin-top: 55px;
     text-align: center;
     font: 18px/14px copperplate;
     color:rgb(211,89,6);
@@ -218,8 +223,12 @@ body, input, select, textarea, button, .ui-btn {
     min-height: 30px;
 }
 
+.panels2 .ui-block-b .largepanel {
+    height: 70px;
+}
+
 .panels2 .ui-block-a {
-    font: normal 14px/15px HelveticaNeue-light;
+    font: normal 15px/15px HelveticaNeue-light;
     color: grey;
     width: 35%;
     padding-right: 16px;
@@ -227,22 +236,22 @@ body, input, select, textarea, button, .ui-btn {
 }
 
 .panels2 .ui-block-b {
-    font: normal 13px/15px HelveticaNeue-light;
+    font: normal 14px/15px HelveticaNeue-light;
     color:rgb(90,90,90);
     text-align: left;
 }
 
 .contact {
     text-align: center;
-    font: 17px/14px copperplate;
+    font: 20px/16px copperplate;
     color:rgb(90,90,90);
 }
 
 .contact2 {
     text-align: center;
-    font: 12px/14px HelveticaNeue-light;
-    padding-right: 40px;
-    padding-left: 40px;
+    font: 14px/14px HelveticaNeue-light;
+    padding-right: 20px;
+    padding-left: 20px;
     color:grey;
 }
 
