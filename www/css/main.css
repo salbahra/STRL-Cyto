@@ -98,8 +98,10 @@ a {
     color:rgb(90,90,90);
 }
 
+
 .activeButton {
-    background-color: rgba(211,89,50,.3) !important;
+    background-color:rgba(211,89,50,.3)!important;
+    color:rgb(90,90,90)!important;
 }
 
 .ui-toolbar-back-btn {
