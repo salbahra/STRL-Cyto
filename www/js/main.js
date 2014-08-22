@@ -68,8 +68,7 @@ $(document)
 //Handle OS pause
 })
 .on("pagebeforeshow",function(e){
-    var id = "#"+e.target.id,
-        page = $(id);
+    var page = $(e.target);
 
     fixInputClick(page);
 });
@@ -87,7 +86,7 @@ function fixInputClick(page) {
             var heading = $(this);
 
             setTimeout(function(){
-                heading.removeClass("ui-btn-active");
+                heading.removeClass("activeButton");
             },100);
         });
         page.find(".ui-select > .ui-btn").each(function(a,b){
