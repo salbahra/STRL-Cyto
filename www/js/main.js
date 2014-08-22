@@ -19,7 +19,7 @@ if (isAndroid) {
 $(document)
 .ready(function() {
     //Attach FastClick handler
-//    FastClick.attach(document.body);
+    FastClick.attach(document.body);
 
     //Use system browser for links on iOS and Windows Phone
     if (isiOS || isIEMobile) {
@@ -68,8 +68,7 @@ $(document)
 //Handle OS pause
 })
 .on("pagebeforeshow",function(e){
-    var id = "#"+e.target.id,
-        page = $(id);
+    var page = $(e.target);
 
     fixInputClick(page);
 });
@@ -83,6 +82,13 @@ function fixInputClick(page) {
     // Handle Fast Click quirks
     if (!FastClick.notNeeded(document.body)) {
         page.find("input[type='checkbox']:not([data-role='flipswitch'])").addClass("needsclick");
+        page.find(".ui-collapsible-heading-toggle").on("click",function(){
+            var heading = $(this);
+
+            setTimeout(function(){
+                heading.removeClass("activeButton");
+            },100);
+        });
         page.find(".ui-select > .ui-btn").each(function(a,b){
             var ele = $(b),
                 id = ele.attr("id");
