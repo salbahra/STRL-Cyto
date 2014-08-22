@@ -86,7 +86,6 @@ function fixInputClick(page) {
         page.find(".ui-select > .ui-btn").each(function(a,b){
             var ele = $(b),
                 id = ele.attr("id");
-
             ele.attr("data-rel","popup");
             ele.attr("href","#"+id.slice(0,-6)+"listbox");
         });

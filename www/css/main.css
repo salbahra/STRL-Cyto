@@ -84,14 +84,24 @@ a {
 
 .ui-page-theme-a .ui-btn {
     background-color: transparent;
-    color:rgb(90,90,90);
-    
+    color:rgb(90,90,90); 
 }
 
-.ui-btn-left {
+.ui-toolbar-back-btn {
+    background-color: transparent;
+    border-color: none;
+    color: none;
+    text-shadow: none;
     backface-visibility: none;
     box-shadow: none;
     border: none;
+    color:rgb(90,90,90);
+}
+
+
+.activeButton {
+    background-color:rgba(211,89,50,.3)!important;
+    color:rgb(90,90,90)!important;
 }
 
 .ui-toolbar-back-btn {
@@ -109,6 +119,7 @@ body, input, select, textarea, button, .ui-btn {
     width: 100%;
     top: 0px;
     z-index:200;
+    border-top: none;
 }
 
 .content {
@@ -255,6 +266,3 @@ body, input, select, textarea, button, .ui-btn {
     color:grey;
 }
 
-.activeButton {
-    background-color: rgba(211,89,50,.3) !important;
-}
