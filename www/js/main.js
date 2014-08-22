@@ -19,7 +19,7 @@ if (isAndroid) {
 $(document)
 .ready(function() {
     //Attach FastClick handler
-//    FastClick.attach(document.body);
+    FastClick.attach(document.body);
 
     //Use system browser for links on iOS and Windows Phone
     if (isiOS || isIEMobile) {
