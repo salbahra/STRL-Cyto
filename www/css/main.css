@@ -58,10 +58,11 @@ a {
 #start ul, #about ul {
     width:250px;
     margin:0 auto;
+    margin-top: 5px;
     left:0;
     right:0;
     position:absolute;
-    top:120px
+    top:
 }
 
 .custom-corners .ui-bar {
@@ -131,7 +132,7 @@ body, input, select, textarea, button, .ui-btn {
 }
 
 .content {
-    margin-top: 43px;
+    margin-top: 42px;
 }
 
 .h1 {
@@ -139,7 +140,7 @@ body, input, select, textarea, button, .ui-btn {
 }
 
 .hdr1 {
-    margin-top: 15px;
+    margin-top: 3%;
     text-align: center;
     font: bold 22px/40px copperplate;
     color:rgb(211,89,6);
@@ -173,41 +174,54 @@ body, input, select, textarea, button, .ui-btn {
     text-align: center;
     color: rgb(90,90,90);
     font: bold 16px/30px HelveticaNeue;
-    background-color: white;
+    background-color: rgb(240,238,243);
 }
 
 .menuNote {
     text-align: center;
     color: rgb(90,90,90);
     font: italic 10px/20px HelveticaNeue-light;
-    background-color: white;
+    background-color: rgb(240,238,243);
 }
 
 .fishHeader2 {
     text-align: center;
     color: rgb(90,90,90);
     font: bold 16px/50px HelveticaNeue;
-    background-color: white;
+    background-color: rgb(240,238,243);
+}
+
+.ui-collapsible-content {
+ background-color: rgb(247,247,247)!important;
 }
 
 .panels {
     padding-bottom: 0px;
     padding-top: 0px;
+    background-color: white;
 }
 
 .panels .ui-block-a, .panels .ui-block-b {
-    min-height:30px
+    padding: 5px;
 }
 
 .panels .ui-block-a {
     font: normal 14px/18px HelveticaNeue-bold;
     color: rgb(90,90,90);
+    padding-right: 3px;
+    padding-left: 0px;
 }
 
 .panels .ui-block-b {
     font: italic 14px/18px HelveticaNeue;
     color: grey;
     font-weight: 200;
+    padding-left: 3px;
+}
+
+.publicationlist {
+    background-color: white;
+    margin-top: 42px;
 }
 
 .publications {
