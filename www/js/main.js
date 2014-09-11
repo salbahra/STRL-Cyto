@@ -18,24 +18,21 @@ if (isAndroid) {
 
 $(document)
 .ready(function() {
-    var target = "_blank";
-
     //Attach FastClick handler
     FastClick.attach(document.body);
 
     //Use system browser for links on iOS and Windows Phone
     if (isiOS || isIEMobile) {
-        target = "_system";
+        $.mobile.document.on("click",".iab",function(){
+            window.open(this.href,"_system","enableViewportScale=yes");
+            return false;
+        });
+    } else if (isAndroid) {
+        $.mobile.document.on("click",".iab",function(){
+            window.open(this.href,"_blank","enableViewportScale=yes");
+            return false;
+        });
     }
-
-    $.mobile.document.on("click",".iab",function(){
-        var button = $(this);
-        window.open(this.href,target,"enableViewportScale=yes");
-        setTimeout(function(){
-            button.removeClass("ui-btn-active");
-        },100);
-        return false;
-    });
 })
 .one("deviceready", function() {
     try {
