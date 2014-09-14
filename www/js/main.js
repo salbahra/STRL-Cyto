@@ -21,18 +21,30 @@ $(document)
     //Attach FastClick handler
     FastClick.attach(document.body);
 
+    var options = "enableViewportScale=yes";
+
     //Use system browser for links on iOS and Windows Phone
-    if (isiOS || isIEMobile) {
-        $.mobile.document.on("click",".iab",function(){
-            window.open(this.href,"_system","enableViewportScale=yes");
-            return false;
-        });
-    } else if (isAndroid) {
-        $.mobile.document.on("click",".iab",function(){
-            window.open(this.href,"_blank","enableViewportScale=yes");
-            return false;
-        });
+    if (isiOS) {
+        options = "location=no,enableViewportScale=yes,toolbarposition=top,closebuttoncaption=Done";
     }
+
+    $.mobile.document.on("click",".iab",function(){
+        var button = $(this),
+            iab = window.open(this.href,"_blank","location=no,enableViewportScale=yes,toolbarposition=top,closebuttoncaption=Done");
+
+        if (isIEMobile) {
+            $.mobile.document.data("iabOpen",true);
+            iab.addEventListener("exit",function(){
+                $.mobile.document.removeData("iabOpen");
+            });
+        }
+
+        setTimeout(function(){
+            button.removeClass("activeButton");
+        },100);
+        return false;
+    });
+
 })
 .one("deviceready", function() {
     try {
@@ -51,8 +63,9 @@ $(document)
 
     // For Android, Blackberry and Windows Phone devices catch the back button and redirect it
     $.mobile.document.on("backbutton",function(){
-        window.history.back();
-        return false;
+        if (isIEMobile && $.mobile.document.data("iabOpen")) {
+            return false;
+        }
     });
 
     isReady = true;
